@@ -1,0 +1,55 @@
+body{
+    background-color: #a30000;
+    color: white;
+}
+.container{
+    text-align: center;
+    margin: 0 auto;
+}
+#dieci,#venti,#cinquanta,#cento, #logout, #secondiChiam,#numeroChiam,#inoltraChiam,#infoChiamate,#azzeraChiam,#ricarica{
+    display: none;
+}
+.btn, input{
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+.smartphone{
+    position: relative;
+    right: 0;
+    background-image: url('../img/phone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 8em 3em 0;
+    margin: 0 50px 0 200px;
+    height: 75vh;
+    width: 20vw;
+    background-position: center top;
+    box-sizing: border-box;
+}
+input:disabled{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.8);
+}
+#numero{
+    height: 7%;
+    font-size: 1.1em;
+}
+svg{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.infoUtenti{
+    text-align: left;
+}
+.infoutenti p{
+    font-size: 20em;
+}
+#cronologia{
+    overflow: auto;
+    height: 200px;
+}
+#cronologia p{
+    background-color: rgba(255, 255, 255, 0.3);
+}
