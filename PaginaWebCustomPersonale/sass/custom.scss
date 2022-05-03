@@ -1,0 +1,125 @@
+$primary: #6549ff;
+$secondary: #64379f;
+$light: #9662bc;
+$navbar-dark-hover-color: #20c1d6;
+$sfumatura: linear-gradient( #6b88cc, #9662bc);
+$sfumatura2: linear-gradient( #9662bc, #6b88cc);
+$link-color: white;
+$link-hover-color: #20c1d6;
+$personalGradient: linear-gradient(184deg, rgba(150,98,188,1) 15%, rgba(107,136,204,1) 59%);
+$white-semitrasparent: rgba(255, 255, 255, 0.3);
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "function";
+
+
+// ### HOMEPAGE ###
+.backNav{
+    background-image: $sfumatura;
+    box-shadow: 0px 7px 17px 10px $secondary;
+    position: relative;
+    z-index: 2;
+}
+.brandMio{
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px, 2px 2px 2px rgba(150,98,188,0);
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: white;
+    background: linear-gradient(180deg, rgba(255,255,255,0.4822303921568627) 0%, rgba(255,255,255,1) 58%, rgba(150,98,188,1) 85%, rgba(107,136,204,1) 100%);
+}
+div h1{
+    background: $light;
+    background: -webkit-radial-gradient(ellipse farthest-side at bottom ri ght, #9662BC 0%, #6B88CC 100%);
+    background: -moz-radial-gradient(ellipse farthest-side at bottom right, #9662BC 0%, #6B88CC 100%);
+    background: radial-gradient(ellipse farthest-side at bottom right, #9662BC 0%, #6B88CC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+}
+.paraHead{
+    font-size: 1.2em;
+    padding: 0 1.5em;
+}
+button{
+    background-image: $sfumatura2;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+.partner{
+    background-color: $white-semitrasparent;
+}
+.descr{
+    z-index: -1;
+    background: rgb(150,98,188);
+    background: radial-gradient(circle, rgba(150,98,188,1) 0%, rgba(107,136,204,1) 33%, rgba(150,98,188,1) 66%, rgba(107,136,204,1) 100%);
+}
+.descr2{
+    background: rgb(150,98,188);
+    background: $personalGradient;
+}
+.imgbanner{
+    box-shadow: 0px -10px 25px 16px $secondary;
+}
+.mioCarousel{
+    box-shadow:0px 26px 44px 10px rgba(0,0,0,0.4);
+}
+
+// ### SHOP ###
+@mixin ecomerceItem {
+    background-size: cover;
+    background-position: center;
+}
+.servizihead{
+    background: $personalGradient;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img1{
+    background-image: url(../assets/img1.jpg);
+    @include ecomerceItem;
+}
+.img2{
+    background-image: url(../assets/img2.jpg);
+    @include ecomerceItem;
+}
+.img3{
+    background-image: url(../assets/img3.jpeg);
+    @include ecomerceItem;
+}
+.img4{
+    background-image: url(../assets/img4.jpg);
+    @include ecomerceItem;
+}
+
+@media screen and (max-width: 767px){
+    .carousel-caption{
+        position: absolute;
+        left: 10px;
+        font-size: 0.7em;
+        width: 95%;
+    }
+    .titoloCaption{
+        font-size: 1.3em;
+        width: 5%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 950px){
+    .imgbanner{
+        box-shadow: none;
+    }
+    .carousel-caption{
+        position: absolute;
+        left: 10px;
+        width: 95%;
+    }
+    .titoloCaption{
+        font-size: 1em;
+        width: 20%;
+        padding: 2px;
+    }
+}
+

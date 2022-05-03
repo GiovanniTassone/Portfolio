@@ -1,0 +1,179 @@
+body {
+  text-align: center;
+  background-color: #a3c4f3;
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  color: #1d3557;
+  font-size: 3em;
+}
+.testoAnimato {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+#calcolatrice {
+  background: #1d3557;
+  margin: 0 auto;
+  width: 27em;
+  display: grid;
+  grid-template-areas:
+    "risultato risultato risultato risultato "
+    "sette otto nove divisore"
+    "quattro cinque sei moltiplicatore"
+    "uno due tre minuendo"
+    "canc zero punto addizione"
+    "uguale uguale uguale uguale";
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 8px;
+  box-shadow: 0px 7px 20px 11px rgba(0, 0, 0, 0.8);
+  -webkit-animation-name: scorrimento;
+  animation-name: scorrimento;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes scorrimento {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes scorrimento {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+button {
+  padding: 1em;
+  font-size: 1.8em;
+  color: #457b9d;
+  border-radius: 8px;
+  background-color: #f1faee;
+  font-weight: bolder;
+  display: grid;
+  font-family: "Oswald", sans-serif;
+}
+button:hover {
+  background: #457b9d;
+  color: white;
+  transform: scale(1.03);
+  box-shadow: 0px 0px 25px 3px rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease-in-out;
+}
+button:disabled {
+  background: #457b9d;
+  color: white;
+}
+#risultato {
+  background-color: white;
+  border: 5px solid #457b9d;
+  grid-area: risultato;
+  padding: 0.2em 0.5em 0.2em;
+  border-radius: 8px;
+  text-align: start;
+  font-size: 2em;
+  height: 2em;
+  font-family: "Oswald", sans-serif;
+}
+#num7 {
+  grid-area: sette;
+}
+#num8 {
+  grid-area: otto;
+}
+#num9 {
+  grid-area: nove;
+}
+#divisore {
+  grid-area: divisore;
+}
+#num4 {
+  grid-area: quattro;
+}
+#num5 {
+  grid-area: cinque;
+}
+#num6 {
+  grid-area: sei;
+}
+#moltiplicatore {
+  grid-area: moltiplicatore;
+}
+#num1 {
+  grid-area: uno;
+}
+#num2 {
+  grid-area: due;
+}
+#num3 {
+  grid-area: tre;
+}
+#minuendo {
+  align-content: center;
+  grid-area: minuendo;
+  font-size: 45px;
+  padding: 0;
+}
+#canc {
+  grid-area: canc;
+}
+#canc:hover {
+  background-color: #e63946;
+}
+#num0 {
+  grid-area: zero;
+}
+#punto {
+  align-content: center;
+  grid-area: punto;
+  font-size: 40px;
+  padding: 0;
+}
+#addizione {
+  align-content: center;
+  grid-area: addizione;
+  font-size: 45px;
+  padding: 0;
+}
+#uguale {
+  grid-area: uguale;
+}
+#uguale:hover {
+  background-color: #f9c74f;
+}
+/* @media screen and (max-width: 480px){
+  body {
+    background-color: #f3a3e2;
+  }
+} */

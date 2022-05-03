@@ -1,0 +1,549 @@
+/* IMPOSTAZIONI GENERALI */
+html {
+  font-size: 62%;
+}
+body {
+  color: #000;
+  font-size: 1.5rem;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.8;
+}
+/* HEADER */
+header {
+  background-color: white;
+  box-shadow: 0px 5px 14px 1px #d3d3d3;
+  position: relative;
+  z-index: 3;
+}
+header div img {
+  margin: 10px 10px 0px;
+}
+/* MAIN */
+article section:first-child {
+  background-image: url(../images/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+}
+article section:nth-child(2) {
+  padding: 0 20px 0;
+}
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+  color: white;
+  text-shadow: 2px 2px 0px #000;
+  margin: 0.8em;
+}
+#intro div p {
+  color: white;
+  text-shadow: -3px 2px 5px #000;
+  margin: 2em;
+  text-align: left;
+  font-family: "Fira Sans", sans-serif;
+}
+#layover {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.descr {
+  text-align: center;
+  margin: 0 4em;
+}
+h2 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 2em 2em 0.4em;
+  text-align: center;
+}
+h2 .descr {
+  text-align: center;
+}
+article p:nth-child(2) {
+  text-align: center;
+}
+section i {
+  color: #e42424;
+  font-size: 2em;
+}
+h3 {
+  font-weight: bold;
+  font-size: 1.7em;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#layover .button {
+  margin-left: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  animation-name: espansione;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+.button {
+  border: none;
+  background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+  color: white;
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Fira Sans", sans-serif;
+}
+button a:visited, button a {
+  text-decoration-line: none;
+  color: white;
+}
+main section h2 {
+  font-size: 2em;
+}
+main section:nth-child(3) {
+  background-color: #0c0633;
+  color: white;
+  text-align: center;
+  padding: 5em 1em;
+}
+.futuro {
+  text-align: center;
+  width: 90%;
+  margin: 2.5em auto;
+}
+.futuro i {
+  color: #e42424;
+}
+.futuro img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 300px;
+  height: 300px;
+}
+.flex {
+  text-align: center;
+  padding: 1em 0em;
+}
+.scrivici {
+  background-color: #0c0633;
+  text-align: center;
+  color: white;
+  padding: 4em 1em;
+}
+.scrivici h2 {
+  margin: 0.5em 1em;
+}
+.scrivici p {
+  text-align: center;
+  padding: 0 2em;
+}
+.scrivici button {
+  width: 7em;
+  margin-top: 1.5em;
+}
+/* FOOTER */
+footer {
+  background-color: rgb(238, 238, 238);
+  padding: 2em;
+}
+footer div h4 {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+  line-height: 1;
+  font-weight: bold;
+}
+footer div i {
+  color: #e42424;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+footer div input {
+  width: 98.9%;
+  height: 2.5em;
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+  min-width: auto;
+}
+footer div button {
+  width: 100%;
+  max-width: 404px;
+  margin-bottom: 1.3em;
+}
+footer p:last-child {
+  font-size: 1.1em;
+}
+footer div p {
+  margin-bottom: 2em;
+}
+@-webkit-keyframes espansione {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+@keyframes espansione {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+.espansione {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.espansione:before {
+  content: "";
+  position: absolute;
+  border: #000000 solid 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+.espansione:before{
+  -webkit-animation-name: espansione;
+  animation-name: espansione;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 767px) {
+  main article section:nth-child(2) {
+    text-align: center;
+  }
+  header nav ul {
+    position: absolute;
+    top: 0;
+    right: 120%;
+    transition: left 0.5s ease-in;
+    background-color: white;
+    width: 100vw;
+    height: 7vh;
+    box-shadow: 0px 8px 13px 10px #d3d3d3;
+    z-index: 1;
+    list-style: none;
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.1em;
+    gap: 5px;
+  }
+
+  header nav ul a:visited,
+  header nav ul a {
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .menu {
+    display: none;
+  }
+  .menu:checked ~ nav ul {
+    right: 0;
+    transition: left 0, 5s ease-in;
+  }
+  .iconaMenu {
+    position: absolute;
+    top: 1vh;
+    right: 6vw;
+    z-index: 2;
+    color: #e42424;
+    font-size: 1.5em;
+  }
+  #registrati {
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    color: white;
+    padding: 0.3em;
+  }
+  #table2 {
+    display: none;
+  }
+  .flex p{
+    margin-left: 3.5em;
+    margin-right: 3.5em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu,
+  .iconaMenu {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    margin: 1.5em 3em 0px 155px;
+  }
+  #intro div p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 10.5em;
+    margin-right: 11em;
+    font-family: "Fira Sans", sans-serif;
+  }
+  #layover .espansione {
+    margin-left: 9.5em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    font-size: 1.1em;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  header nav ul a {
+    color: rgb(59, 59, 59);
+    text-decoration: none;
+    margin: 1em;
+  }
+  .descr {
+    text-align: center;
+    margin: 0 13em;
+  }
+  h2 .descr {
+    text-align: center;
+    margin: 1em;
+  }
+  #registrati {
+    background-image: linear-gradient(to right, #6cc1e2, #392f7a);
+    color: white;
+    padding: 0.3em;
+  }
+  article section:nth-child(4) {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .flexSection {
+    display: flex;
+    padding: 2em 6em 4em;
+    gap: 3.5em;
+  }
+  .flex {
+    text-align: center;
+    flex: 1 0 10%;
+  }
+  .futuro {
+    display: flex;
+    justify-content: center;
+  }
+  .futuro div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-left: 1em;
+  }
+  .futuro div p {
+    text-align: left;
+  }
+  #footerprbl{
+    height: 13em;
+  }
+  .flexFooter {
+    display: flex;
+    gap: 2em;
+  }
+  .copy {
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .flexFooter div {
+    flex: 1 0 25%;
+  }
+  .flexFooter i {
+    font-size: 2em;
+  }
+  .flexChisiamo {
+    display: flex;
+  }
+  #table1 {
+    display: none;
+  }
+  #table2 {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+    text-align: center;
+    margin-bottom: 4em;
+  }
+  #table2 th {
+    background-color: #6083a3;
+    color: white;
+    padding: 1em;
+    height: 3em;
+    vertical-align: middle;
+  }
+  #table2 tr:nth-child(2), #table2 tr:nth-child(4) {
+    background-color: #d2dce5;
+  }
+  #table2 td {
+    padding: 0.5em 2em;
+    height: 3.5em;
+  }
+  #contatti {
+    display: flex;
+    align-items: center;
+  }
+  #contatti form {
+    flex: 1 0 50%;
+    align-self: flex-start;
+    padding-top: 0.5em;
+  }
+  #contatti div {
+    flex: 1 0 50%;
+  }
+  #contattaci footer {
+    position: fixed;
+    bottom: 0;
+  }
+  footer{
+    padding: 2em 5em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  h1 {
+    margin: 1.5em 9em 0px 9em;
+  }
+  #intro div p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 24em;
+    margin-right: 30em;
+  }
+  #layover .espansione {
+    margin-left: 21.5em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    font-size: 1.1em;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .flexFooter {
+    margin-left: 6em;
+    margin-right: 6em;
+  }
+  #table2 td {
+    padding: 1em 4em;
+    height: 1em;
+  }
+  #contattaci footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  footer{
+    padding: 2em 5em;
+  }
+}
+
+/*### CHI SIAMO ###*/
+.chisiamo {
+  text-align: center;
+}
+.chisiamo h1 {
+  color: black;
+  text-shadow: none;
+  margin-bottom: 0.5em;
+}
+.chisiamo p, .laptop p, .laptopChiuso p {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  font-size: 1.1em;
+}
+.laptopChiuso img, .laptop img{
+  width: 80%;
+  height: 80%;
+}
+.laptopChiuso, .laptop{
+  margin-bottom: 3em;
+}
+.chisiamo img {
+  width: 90%;
+}
+.chisiamo #table1 {
+  background-color: #d2dce7;
+  width: 80%;
+  max-width: 500px;
+  margin: 2em auto;
+  text-align: left;
+}
+#table1 th,
+#table1e td {
+  padding: 0.5em;
+  font-size: 1.1em;
+  text-align: left;
+}
+#table1 td {
+  width: 14em;
+}
+#table1 th {
+  width: 6em;
+}
+.chisiamo th {
+  font-weight: bold;
+}
+.chisiamo caption {
+  font-size: 1.8em;
+}
+.white {
+  background-color: white;
+}
+
+/*### CONTATTI ### */
+
+#contatti {
+  text-align: center;
+  margin: 2em auto;
+}
+input, textarea {
+  display: block;
+  margin: auto;
+}
+input {
+  width: 80%;
+  height: 35px;
+  max-width: 400px;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+textarea {
+  width: 80%;
+  height: 75px;
+  max-width: 400px;
+  margin-bottom: 1em;
+}
+#contatti form .button {
+  margin-bottom: 2em;
+  font-size: 1.3em;
+}
+.parafContatt {
+  margin: 0px 4em 0.5em 4em;
+}
